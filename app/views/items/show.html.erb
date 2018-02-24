@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item number:</strong>
+  <%= @item.item_number %>
+</p>
+
+<p>
+  <strong>Sap number:</strong>
+  <%= @item.sap_number %>
+</p>
+
+<p>
+  <strong>Tr number:</strong>
+  <%= @item.tr_number %>
+</p>
+
+<p>
+  <strong>Rb number:</strong>
+  <%= @item.rb_number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @item.machine %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @item.material %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @item.finish %>
+</p>
+
+<p>
+  <strong>Lead time:</strong>
+  <%= @item.lead_time %>
+</p>
+
+<p>
+  <strong>Additional:</strong>
+  <%= @item.additional %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

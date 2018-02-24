@@ -1,0 +1,67 @@
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :item_number %>
+    <%= form.text_field :item_number, id: :item_item_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sap_number %>
+    <%= form.text_field :sap_number, id: :item_sap_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tr_number %>
+    <%= form.text_field :tr_number, id: :item_tr_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rb_number %>
+    <%= form.text_field :rb_number, id: :item_rb_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :item_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :machine %>
+    <%= form.text_field :machine, id: :item_machine %>
+  </div>
+
+  <div class="field">
+    <%= form.label :material %>
+    <%= form.text_field :material, id: :item_material %>
+  </div>
+
+  <div class="field">
+    <%= form.label :finish %>
+    <%= form.text_field :finish, id: :item_finish %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lead_time %>
+    <%= form.text_field :lead_time, id: :item_lead_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :additional %>
+    <%= form.text_field :additional, id: :item_additional %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
