@@ -2,19 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-	color: red;
+div {
+	width: 100%;	
+	.table-one {
+		display: inline;
+		width: 40%;
+		thead {
+			color: red;
+
+		}
+		tbody {
+			color: blue;
+		}
+
+	}
+
+	.table-two {
+		display: inline;
+		width: 60%;
+		thead {
+			font-style: italic;
+			th {
+				text-align: center;
+				border: 1px solid black;
+			}
+		}
+		tbody {
+			td {
+				width: 20%;
+				text-align: center;
+				border: 1px solid black;
+			}
+		}
+	}
+
+	.description {
+		text-align: center;
+		width: 100%;
+		color: black;
+		border-bottom: 1px solid black;
+		// padding-left: 9%;
+		font-style: bold;
+	}
+
+	.table-three {
+		padding-left: 9%;
+		width: 100%;
+		thead {
+			color: blue;
+		}
+	}
+
 }
 
-.show {
-	color: blue;
-	&:hover {
-		color: yellow;
-	}
-	&:visited {
-		color: green;
-	}
-	&:active {
-		color: white;
-	}
-}
+
