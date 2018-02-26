@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<!-- <h1>Items</h1>
+<h1>Items</h1>
 
 <table>
   <thead>
@@ -32,6 +32,7 @@
         <td><%= item.finish %></td>
         <td><%= item.lead_time %></td>
         <td><%= item.additional %></td>
+        <td><%= image_tag(item.avatar) %></td>
         <td><%= link_to 'Show', item, class: "show" %></td>
         <td><%= link_to 'Edit', edit_item_path(item), class: "show"%></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "show"%></td>
@@ -42,7 +43,7 @@
 
 <br>
 
-<%= link_to 'New Item', new_item_path %> -->
+<%= link_to 'New Item', new_item_path %>
 
 <div>
 
