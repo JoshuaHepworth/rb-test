@@ -2,10 +2,14 @@
 
 <h1>Items</h1>
 
+<!-- from here -->
+
+
 <table>
   <thead>
     <tr>
       <th>Item number</th>
+      <th>Item picture</th>
       <th>Sap number</th>
       <th>Tr number</th>
       <th>Rb number</th>
@@ -23,6 +27,7 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.item_number %></td>
+        <td><%= image_tag item.avatar.url(:thumb) %></td>
         <td><%= item.sap_number %></td>
         <td><%= item.tr_number %></td>
         <td><%= item.rb_number %></td>
@@ -32,7 +37,6 @@
         <td><%= item.finish %></td>
         <td><%= item.lead_time %></td>
         <td><%= item.additional %></td>
-        <td><%= image_tag(item.avatar) %></td>
         <td><%= link_to 'Show', item, class: "show" %></td>
         <td><%= link_to 'Edit', edit_item_path(item), class: "show"%></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "show"%></td>
@@ -41,10 +45,13 @@
   </tbody>
 </table>
 
+<!-- to here -->
+
+
 <br>
 
 <%= link_to 'New Item', new_item_path %>
-
+<!-- 
 <div>
 
   
@@ -98,4 +105,4 @@
     </tbody>
   </table>
 
-</div>
+</div> -->
