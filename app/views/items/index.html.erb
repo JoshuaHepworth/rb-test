@@ -1,6 +1,8 @@
+
 <p id="notice"><%= notice %></p>
 
 <h1>a robert brysiewicz inc, co.</h1>
+<h2>Table of Contents|1</h2>
 
 <!-- from here -->
 
@@ -10,15 +12,19 @@
       <br>
       <th>Item number</th>
      
-      <th>Sap number</th>
-      <th>Tr number</th>
-      <th>Rb number</th>
-      <th>Name </th>
-      <th>Machine</th>
-      <th>Material</th>
-      <th>Finish</th>
-      <th>Lead time</th>
-      <th>Additional</th>
+      <th>Sap #</th>
+      <th>Tr card #</th>
+      <th>Rb #</th>
+      <div class="border">
+      <table class="list">
+      <table class="name"><th>Name:</th></table>
+      <table class="machine"><th>Machine:</th></table>
+      <table class="material"><th>Material:</th></table>
+      <table class="finish"><th>Finish:</th></table>
+      <table class="lead"><th>Lead time:</th></table>
+      <table class="additional"><th>Additional:</th></table>    
+      </div>    
+    </table>
     </tr>
   </thead>
   <tbody>
@@ -29,15 +35,15 @@
           <%= image_tag item.avatar.url(:thumb) %>
         </td>
         
-        <td><%= item.sap_number %></td>
-        <td><%= item.tr_number %></td>
-        <td><%= item.rb_number %></td>
-        <td><%= item.name %></td>
-        <td><%= item.machine %></td>
-        <td><%= item.material %></td>
-        <td><%= item.finish %></td>
-        <td><%= item.lead_time %></td>
-        <td><%= item.additional %></td>
+        <table class="sap"><td><%= item.sap_number %></td></table>
+        <table class="num"><td><%= item.tr_number %></td></table>
+        <table class="rb"><td><%= item.rb_number %></td></table>
+        <table class="namefirst"><td><%= item.name %></td></table>
+        <table class="machinefirst"><td><%= item.machine %></td></table>
+        <table class="materialfirst"><td><%= item.material %></td></table>
+        <table class="finishfirst"><td><%= item.finish %></td></table>
+        <table class="leadfirst"><td><%= item.lead_time %></td></table>
+        <table class="additionalfirst"><td><%= item.additional %></td></table>
       </tr>
       <tr>
         <td><%= link_to 'Show', item, class: "show" %></td>
